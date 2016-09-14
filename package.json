@@ -1,0 +1,31 @@
+{
+  "name": "Thiagod",
+  "version": "1.0.0",
+  "description": "API Sistema web para gerenciamento de TCC",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bower": "^1.7.9",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-load": "^1.1.15",
+    "firebase": "^3.1.0",
+    "method-override": "^2.3.5",
+    "nodemon": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node se\t",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othiagoduarte/my-tcc-api.git"
+  },
+  "author": "Thiago Duarte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othiagoduarte/aps_pi2/issues"
+  },
+  "homepage": "https://github.com/othiagoduarte/aps_pi2#readme"
+}
