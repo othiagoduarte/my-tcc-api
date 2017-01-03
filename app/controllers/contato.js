@@ -2,8 +2,13 @@ module.exports = function(app)
 {
 	var Contato = app.models.contato;		
 	var controller = {};
+	
+	controller.getAll = getAll; /*BUSCAR TODOS*/ 
+	controller.get = get; 		/*BUSCAR POR ID*/
+	controller.update = update; /*ATUALIZAR POR ID*/
+	controller.save = save;  	/*INSERIR NOVO*/
 
-	controller.get = function(req, res) {	
+	function get (req, res) {	
 
 		Contato.find().exec()
 		.then(function(contatos){
@@ -12,7 +17,7 @@ module.exports = function(app)
 
 	};
  	
-	controller.getAll = function(req, res) {
+	function getAll (req, res) {
 
 		Contato.find().exec()
 		.then(function(contatos){
@@ -20,6 +25,14 @@ module.exports = function(app)
 		});
 			
 	};
- 	
+	
+	function update(req, res){
+
+	};
+
+	function save(req, res){
+
+	}
+
 	return controller;	
 };
