@@ -1,6 +1,6 @@
 module.exports = function(app)
 {
-	var Contato = app.models.contato;		
+	var Contatos = app.models.contatos;		
 	var controller = {};
 	
 	controller.getAll = getAll; /*BUSCAR TODOS*/ 
@@ -10,7 +10,7 @@ module.exports = function(app)
 
 	function get (req, res) {	
 
-		Contato.find().exec()
+		Contatos.find().exec()
 		.then(function(contatos){
 			res.json(contatos);
 		});
@@ -19,7 +19,7 @@ module.exports = function(app)
  	
 	function getAll (req, res) {
 
-		Contato.find().exec()
+		Contatos.find().exec()
 		.then(function(contatos){
 			res.json(contatos);
 		});
