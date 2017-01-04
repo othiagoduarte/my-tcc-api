@@ -1,6 +1,6 @@
 module.exports = function(app)
 {
-	var Contatos = app.models.contatos;		
+	var Coordenador = app.models.coordenador;		
 	var controller = {};
 	
 	controller.getAll = getAll; /*BUSCAR TODOS*/ 
@@ -10,18 +10,14 @@ module.exports = function(app)
 
 	function get (req, res) {	
 
-		Contatos.find().exec()
-		.then(function(contatos){
-			res.json(contatos);
-		});
 
 	};
  	
 	function getAll (req, res) {
 
-		Contatos.find().exec()
-		.then(function(contatos){
-			res.json(contatos);
+		Coordenador.find().exec()
+		.then(function(data){
+			res.json(data);
 		});
 			
 	};
