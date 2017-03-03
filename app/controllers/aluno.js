@@ -15,11 +15,14 @@ module.exports = function(app)
  	
 	function getAll (req, res) {
 
+		res.header("Access-Control-Allow-Origin", "*");
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		
 		Aluno.find().exec()
 		.then(function(alunos){
-			res.json(alunos);
+			res.status(204).jsonp(alunos);
+		
 		});
-			
 	};
 	
 	function update(req, res){

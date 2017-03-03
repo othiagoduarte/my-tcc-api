@@ -6,10 +6,8 @@ module.exports = function()
 {
 	var app = express();
 	
-	//app.set('port',process.env.PORT);
-	//app.set('host',process.env.IP);
-
-	app.set('port',3000);
+	app.set('host',process.env.IP || "127.0.0.1");
+	app.set('port',process.env.PORT || 3008);
 
 	app.use(express.static('./public'));
 	
