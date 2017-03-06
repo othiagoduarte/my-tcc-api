@@ -3,14 +3,21 @@ var mongoose = require('mongoose');
 module.exports = function() {
 
     var schema = mongoose.Schema({  
-        id_aluno: {
+        titulo: {
             type: String,
-            required: true
         },
-        id_professor: {
+        resumo: {
             type: String,
-            required: true
         },
+        problema: {
+            type: String,
+        },
+        solucao: {
+            type: String,
+        },        
+        aluno:{},
+        professor:{}
+
     });
 
     return mongoose.model('Projetos', schema);

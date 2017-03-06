@@ -5,8 +5,8 @@ module.exports = function(app)
 	
 	controller.getAll = getAll; /*BUSCAR TODOS*/ 
 	controller.get = get; 		/*BUSCAR POR ID*/
-	controller.update = update; /*ATUALIZAR POR ID*/
-	controller.save = save;  	/*INSERIR NOVO*/
+	controller.save = save; /*ATUALIZAR POR ID*/
+	controller.add = add;  	/*INSERIR NOVO*/
 	controller.getByMatricula = getByMatricula;	/*BUSCAR PELA MATRICULA*/
 	
 	function get (req, res) {	
@@ -40,11 +40,11 @@ module.exports = function(app)
 		});
 	};
 	
-	function update(req, res){
+	function save(req, res){
 
 	};
 
-	function save(req, res){
+	function add(req, res){
 
 	}
 

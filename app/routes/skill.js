@@ -4,8 +4,8 @@ module.exports = function(app)
 	
 	app.route('/skill')
 	.get(controller.getAll)
-	.post(controller.save)
-	.put(controller.update);
+	.post(controller.add)
+	.put(controller.save);
 
 	app.route('/skill/:id')
 	.get(controller.get);

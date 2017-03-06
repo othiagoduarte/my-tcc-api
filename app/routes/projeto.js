@@ -3,7 +3,10 @@ module.exports = function(app)
 	var controller = app.controllers.projeto;
 	
 	app.get('/projeto/:id',controller.get);
+	app.get('/projeto/getByAluno/:matriculaAluno',controller.getByAluno);
 	app.get('/projeto', controller.getAll);
-	app.get('/projeto',controller.save);
-	app.get('/projeto',controller.update);
+
+	app.post('/projeto',controller.add);
+	app.put('/projeto',controller.save);
+		
 };

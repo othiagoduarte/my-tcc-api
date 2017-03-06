@@ -4,5 +4,5 @@ module.exports = function(app)
 	
 	app.get('/solicitacao/:id',controller.get);
 	app.get('/solicitacao', controller.getAll);
-	app.post('/solicitacao',controller.save);
+	app.post('/solicitacao',controller.add);
 };

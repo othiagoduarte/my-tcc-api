@@ -4,6 +4,6 @@ module.exports = function(app)
 	
 	app.get('/coordenador/:id',controller.get);
 	app.get('/coordenador', controller.getAll);
+	app.get('/coordenador',controller.add);
 	app.get('/coordenador',controller.save);
-	app.get('/coordenador',controller.update);
 };

@@ -4,6 +4,6 @@ module.exports = function(app)
 	
 	app.get('/entrega/:id',controller.get);
 	app.get('/entrega', controller.getAll);
+	app.get('/entrega',controller.add);
 	app.get('/entrega',controller.save);
-	app.get('/entrega',controller.update);
 };
