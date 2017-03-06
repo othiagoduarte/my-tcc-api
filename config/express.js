@@ -18,6 +18,13 @@ module.exports = function()
 	app.use(bodyParser.json());
 	app.use(require('method-override')());
 	
+	app.use(function(req, res, next){
+	  res.header("Access-Control-Allow-Origin", "*");
+      res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+      res.header('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept');
+	  next();   
+	});
+
 	load('models',{cwd: 'app'})
 	.then('controllers')
 	.then('routes')

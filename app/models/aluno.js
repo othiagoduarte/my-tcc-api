@@ -14,10 +14,9 @@ module.exports = function() {
         apresentacao:  {
             type: String
         },
-        id_usuario :{
-            type: String,
-            required: true
-        },
+        curso: {
+            type: String
+        }
     });
 
     return mongoose.model('Alunos', schema);

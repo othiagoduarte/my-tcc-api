@@ -27,8 +27,19 @@ module.exports = function(app)
 	};
 
 	function save(req, res){
+		
+		var _projeto = req.body;
 
+		Projeto.create(_projeto)
+		.then(function(projetos) {
+			res.status(201).json(projetos._doc);
+		},
+		function(erro) {
+			res.status(501).json(erro);
+			console.log(erro);
+		});		
 	}
 
+	
 	return controller;	
 };

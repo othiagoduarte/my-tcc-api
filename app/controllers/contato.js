@@ -14,9 +14,6 @@ module.exports = function(app)
 	};
  	
 	function getAll (req, res) {
-		
-		res.header("Access-Control-Allow-Origin", "*");
-		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
 		Contatos.find().exec()
 		.then(function(contatos){

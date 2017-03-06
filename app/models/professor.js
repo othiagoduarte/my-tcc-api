@@ -7,13 +7,13 @@ module.exports = function() {
             type: String,
             required: true
         },
-        apresentacao:  {
+        titulo:  {
             type: String,
             
         },
-        id_usuario :{
-            type: String
-        },
+        skills :[String]
+        ,
+        disponivel: Boolean
     });
 
     return mongoose.model('Professores', schema);

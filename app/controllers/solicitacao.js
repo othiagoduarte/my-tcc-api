@@ -27,7 +27,17 @@ module.exports = function(app)
 	};
 
 	function save(req, res){
+		
+		var _solicitacao = req.body;
 
+		Solicitacao.create(_solicitacao)
+		.then(function(solicitacoes) {
+			res.status(201).json(solicitacoes._doc);
+		},
+		function(erro) {
+			console.log(erro);
+			res.status(501).json(erro.message);
+		});
 	}
 
 	return controller;	

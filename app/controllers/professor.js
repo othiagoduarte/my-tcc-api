@@ -27,6 +27,16 @@ module.exports = function(app)
 	};
 
 	function save(req, res){
+		
+		var _professor = req.body;
+
+		Professor.create(_professor)
+		.then(function(Professors) {
+			res.status(201).json(Professors._doc);
+		},
+		function(erro) {
+			console.log(erro);
+		});
 
 	}
 
